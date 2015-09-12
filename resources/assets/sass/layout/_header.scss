@@ -1,0 +1,23 @@
+header{
+	nav{
+		@extend .navbar, .navbar-default;
+
+		 & > div:first-of-type{
+			@extend .container; 
+		}
+
+		div.menu{
+			@extend .collapse, .navbar-collapse;
+			
+			> ul:first-of-type{
+				@extend .nav, .navbar-nav;
+
+				li ul{
+					@extend .dropdown-menu;
+				}
+			}
+		}
+
+
+	}
+}

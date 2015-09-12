@@ -1,0 +1,28 @@
+footer {
+	@extend .container;
+
+	ul {
+		@extend .list-unstyled, .list-inline;
+		li {
+			&:first-child {
+				font-weight: bold;
+				color: red;
+
+				&:before {
+					content: none;
+				}
+			}
+
+			&:nth-child(2) {
+				&:before {
+					content: none;
+				}
+			}
+
+			&:before {
+				content: " | ";
+			}
+		}
+	}
+
+}
