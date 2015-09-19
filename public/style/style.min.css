@@ -1571,13 +1571,13 @@ pre {
   .row:after, .breadcrumbs:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, header .banner .left, .sidebar, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, header .banner .right, .main-content, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, header .banner .left, .sidebar, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, header .banner .right, .main-content, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, button.mfull, .sidebar button, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px; }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, button.mfull, .sidebar button {
   float: left; }
 
 .col-xs-1 {
@@ -1613,7 +1613,7 @@ pre {
 .col-xs-11 {
   width: 91.6666666667%; }
 
-.col-xs-12 {
+.col-xs-12, button.mfull, .sidebar button {
   width: 100%; }
 
 .col-xs-pull-0 {
@@ -4813,7 +4813,7 @@ a.thumbnail.active {
   padding-left: 10px; }
 
 .media-left,
-.media > .pull-left {
+.media > .pull-left, .sidebar button .media > .icon {
   padding-right: 10px; }
 
 .media-left,
@@ -5942,7 +5942,7 @@ button.close {
 .pull-right, .breadcrumbs ul {
   float: right !important; }
 
-.pull-left {
+.pull-left, .sidebar button .icon {
   float: left !important; }
 
 .hide {
@@ -6368,6 +6368,11 @@ header .banner .right {
     header .banner .right {
       margin-bottom: -60px; } }
 
+.sidebar button .icon {
+  margin-top: -5px; }
+  .sidebar button .icon .fa {
+    font-size: 2em; }
+
 .breadcrumbs {
   background-color: #f5f5f5; }
   .breadcrumbs .breadcrumb {
@@ -6385,22 +6390,110 @@ button {
   -webkit-transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
           transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275); }
   button.mfull, .sidebar button {
-    width: 85%;
+    width: 100%;
     margin-bottom: 10px; }
+
+.button-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+          -webkit-box-pack: center;
+      justify-content: center; }
+
+.button, button {
+  float: left;
+  display: block;
+  margin: .2em 0;
+  padding: 1em 2em;
+  border: none;
+  background: none;
+  color: inherit;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+  border-color: #1B619D;
+  background: #1B619D;
+  border: 1px solid; }
+
+.button:focus, button:focus {
+  outline: none; }
+
+.button > span, button > span {
+  vertical-align: middle; }
+
+/* Ujarak */
+.button--ujarak, button.mfull, .sidebar button {
+  -webkit-transition: border-color 0.4s, color 0.4s !important;
+          transition: border-color 0.4s, color 0.4s !important; }
+
+.button--ujarak:before, button.mfull:before, .sidebar button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #61C5C2;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transform: scale3d(0.7, 1, 1);
+          transform: scale3d(0.7, 1, 1);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s !important;
+          transition: -webkit-transform 0.4s, opacity 0.4s !important;
+  transition: transform 0.4s, opacity 0.4s !important;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1) !important;
+          transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1) !important; }
+
+.button--ujarak.button--round-s:before, button.button--round-s.mfull:before, .sidebar button.button--round-s:before {
+  border-radius: 2px; }
+
+.button--ujarak.button--inverted:before, button.button--inverted.mfull:before, .sidebar button.button--inverted:before {
+  background: #7986CB; }
+
+.button--ujarak,
+button.mfull,
+.sidebar button, .button--ujarak:before, button.mfull:before, .sidebar button:before {
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1) !important;
+          transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1) !important; }
+
+.button--ujarak:hover, button.mfull:hover, .sidebar button:hover {
+  color: #fff;
+  border-color: #348c8a; }
+
+.button--ujarak.button--inverted:hover, button.button--inverted.mfull:hover, .sidebar button.button--inverted:hover {
+  color: #61C5C2;
+  border-color: #fff; }
+
+.button--ujarak:hover:before, button.mfull:hover:before, .sidebar button:hover:before {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0) !important;
+          transform: translate3d(0, 0, 0) !important; }
 
 .social-icons .fa {
   font-size: 1.25em; }
 
-.social-icons .fa-envelope {
+.fa-envelope {
   color: orange; }
 
-.social-icons .fa-facebook-official {
+.fa-facebook-official {
   color: #3b5998; }
 
-.social-icons .fa-twitter {
+.fa-twitter {
   color: #00aced; }
 
-.social-icons .fa-google-plus-square {
+.fa-google-plus-square {
   color: #dd4b39; }
+
+.fa-youtube, .fa-youtube-square, .youtube {
+  color: #bb0000; }
 
 /*# sourceMappingURL=../../resources/assets/sass/maps/style.min.css.map */

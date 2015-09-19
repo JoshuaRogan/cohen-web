@@ -23,19 +23,24 @@ $soundcloud: #ff3a00;
 	.fa{
 		font-size: 1.25em;
 	}
-	.fa-envelope {
-		color: orange;
-	}
+}
 
-	.fa-facebook-official {
-		color: $facebook;
-	}
+.fa-envelope {
+	color: orange;
+}
 
-	.fa-twitter {
-		color: $twitter;
-	}
+.fa-facebook-official {
+	color: $facebook;
+}
 
-	.fa-google-plus-square {
-		color: $googleplus;
-	}
+.fa-twitter {
+	color: $twitter;
+}
+
+.fa-google-plus-square {
+	color: $googleplus;
+}
+
+.fa-youtube, .fa-youtube-square, .youtube{
+	color: $youtube;
 }
