@@ -1,6 +1,7 @@
 button {
 	@extend .btn, .btn-primary, .button;
 	transition: all $trans-cubic-fast;
+	display: block;
 
 	&.mfull {
 		@extend .center-block, .button--ujarak, .col-xs-12;
@@ -11,14 +12,7 @@ button {
 }
 
 .button-wrapper {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	-webkit-justify-content: center;
-	justify-content: center;
+	
 }
 
 .button {
