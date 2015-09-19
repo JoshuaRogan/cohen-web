@@ -7,7 +7,7 @@
 	<meta name="author" content="Josh Rogan">
 	<meta name="description" content="@yield('description')" >
 	
-	<title> Cohen  | @yield('title')</title>
+	<title> Cohen | @yield('title')</title>
 
 
 	<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
@@ -18,6 +18,7 @@
 	<!-- STYLESHEETS  -->
 	@section('styles')
 		<link rel="stylesheet" type="text/css" href="/style/style.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     @show
 
 	

@@ -1,16 +1,27 @@
 //Base, Hellpers and Utils
-@import "util/_mixins";
-@import "util/_variables";
-@import "util/_responsive";
-@import "base/_typography";
+@import "util/mixins";
+@import "util/variables";
+@import "util/responsive";
+
 
 //Import Bootstrap
-@import "vendor-extensions/_bootstrap";
-@import "vendor/_bootstrap";
+@import "vendor-extensions/bootstrap";
+@import "vendor/bootstrap";
+
+//Import Materialize
+@import "vendor-extensions/owlcarousel";
+@import "vendor/owlcarousel";
+
+//Base
+@import "base/typography";
 
 //Layout
-@import "layout/_layout";
+@import "layout/layout";
 
+//Components
+@import "components/breadcrumbs";
+@import "components/buttons";
+@import "components/social-icons";
 
 //Pages
 @import "pages/welcome";

@@ -1,23 +1,36 @@
 header{
-	nav{
-		@extend .navbar, .navbar-default;
 
-		 & > div:first-of-type{
-			@extend .container; 
+	//Primary Navigation styles
+	nav{
+		
+	}
+
+	//Main Header Styles
+	.banner{
+		@extend .jumbotron, .row;
+
+		img{
+			@extend .img-responsive;
 		}
 
-		div.menu{
-			@extend .collapse, .navbar-collapse;
-			
-			> ul:first-of-type{
-				@extend .nav, .navbar-nav;
+		.left{
+			@extend .col-sm-4, .center-block;
+			@include xs_down(margin-top, -30px);
 
-				li ul{
-					@extend .dropdown-menu;
-				}
+			img{
+				@extend .img-responsive, .center-block;
+				border-bottom: 2px solid $brand-primary; 
+				margin-bottom: 15px; 
+			}
+
+			ul.offices{
+				@extend .list-unstyled, .text-center;
 			}
 		}
-
-
+		.right{
+			@extend .col-sm-8;
+			@include xs_down(padding, 0);
+			@include xs_down(margin-bottom, -60px);
+		}
 	}
 }

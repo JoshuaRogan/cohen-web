@@ -1,3 +1,69 @@
 /**
  * Bootstrap Overrides here
  */
+
+// -----------------------------------------
+//
+//    Color Overrides
+//
+// -----------------------------------------
+$brand-primary: $cohen-blue;
+
+
+
+
+// -----------------------------------------
+//
+//    Typography Overrides
+//
+// -----------------------------------------
+
+
+// -----------------------------------------
+//
+//    Navbar Overide
+//
+// -----------------------------------------
+$navbar-default-bg: $cohen-light-blue;
+$navbar-default-border: darken($navbar-default-bg, 5%);
+$navbar-default-brand-color: white;
+$navbar-default-brand-hover-color: white;
+$navbar-default-color: white;
+$navbar-default-hover-color: white;
+$navbar-default-link-color: white;
+$navbar-default-link-hover-color: black;
+$navbar-default-link-hover-bg: white;
+$navbar-default-link-active-color: black;
+$navbar-default-link-active-bg: white;
+$navbar-default-link-active-bg-color: black;
+$navbar-default-link-disabled-color: white;
+$navbar-default-link-disabled-bg: white;
+$navbar-default-toggle-border-color: white;
+$navbar-default-toggle-hover-bg: white;
+$navbar-default-toggle-icon-bar-bg: white;
+$navbar-margin-bottom: 0;
+
+nav {
+	border-radius: 0 !important;
+}
+
+.navbar-default {
+	.navbar-nav > li > a {
+		transition: color $trans-cubic-fast;
+		transition: background-color $trans-cubic-fast;
+	}
+
+	.navbar-toggle {
+		&:hover,
+		&:focus {
+			.icon-bar {
+				background-color: black;
+			}
+
+		}
+
+	}
+
+}
+
+

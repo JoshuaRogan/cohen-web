@@ -1,0 +1,28 @@
+
+.breadcrumbs{
+	@extend .row; 
+	background-color: #f5f5f5;
+
+	.breadcrumb{
+		display: inline-block;
+		margin-bottom: 0;
+
+		> li + li:before {
+	    	content: "/" !important;
+	    	padding: 0 5px;
+	    	color: #ccc;
+	    }
+
+	   
+	}
+
+	ul{
+		@extend .pull-right;
+		padding: 8px 15px;
+		margin-bottom: 0;
+		li{
+
+		}
+	}
+
+}

@@ -8,7 +8,14 @@ postcssFiles = {
 
 scriptOutput = 'public/js/app.min.js';
 scriptFiles = {
-    src: ['bower_components/jquery/dist/jquery.min.js', 'bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js'],
+    src: [
+        'bower_components/jquery/dist/jquery.min.js',
+        'bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+        'bower_components/owl.carousel/dist/owl.carousel.min.js',
+        'resources/assets/js/**/*.js',
+        'resources/assets/js/main.js',
+
+     ],
     dest: scriptOutput
 }
 
@@ -97,14 +104,25 @@ module.exports = function(grunt) {
                     nospawn: true
                 }
             },
+        },
+        browserSync: {
+            dev: {
+                bsFiles: {
+                    src: [
+                        'public/**/*', 
+                        'resources/views/**/*'
+                    ]
+                },
+                options: {
+                    watchTask: true,
+                    proxy: "cohen.app"
+                }
+            }
         }
     });
 
-
-
     require('load-grunt-tasks')(grunt);
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['browserSync', 'watch']);
     grunt.registerTask('prod', ['sass:dist', 'postcss:prod', 'concat', 'uglify']);
-    grunt.registerTask('dev', ['sass:dist', 'postcss:dev']);
-
+    grunt.registerTask('dev', ['sass:dist', 'postcss:dev', 'concat', 'uglify']);
 };

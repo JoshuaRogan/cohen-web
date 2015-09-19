@@ -1,0 +1,32 @@
+//Custom Dots
+.owl-dots{
+	margin-top:0px;
+	text-align:center;
+	-webkit-tap-highlight-color:transparent;
+	position: relative; 
+	top: -30px;
+}
+.owl-dot{
+	display: inline-block;
+	span{
+		transition: background-color $trans-cubic-fast;
+		width:10px;
+		height:10px;
+		margin:5px 5px;
+		background-color: transparent;
+		display:block;
+		-webkit-backface-visibility:visible;
+		border-radius:30px;
+		border: 1px solid white;
+
+		&:hover{
+			background-color: white; 
+		}
+	}
+
+	&.active{
+		span{
+			background-color: white;
+		}
+	}
+}
