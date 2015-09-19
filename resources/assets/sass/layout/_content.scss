@@ -1,0 +1,10 @@
+.main-content{
+	@extend .col-sm-8;
+}
+
+.sidebar{
+	@extend .col-sm-4;
+	button{
+		@extend .mfull;
+	}
+}

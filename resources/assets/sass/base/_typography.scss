@@ -1,13 +1,15 @@
 h1{
 	@include responsive-auto('font-size', 36px);
+	color: $brand-primary; 
 }
 
 h2{
-	@include responsive-auto('font-size', 30px);
+	@include responsive-auto('font-size', 28px);
+	color: $cohen-light-blue; 
 }
 
 h3{
-	@include responsive-auto('font-size', 28px);
+	@include responsive-auto('font-size', 26px);
 }
 
 h4{
@@ -16,4 +18,12 @@ h4{
 
 p{
 	@include responsive-auto('font-size', 16px);
+}
+
+a{
+	transition: all $trans-cubic-fast;
+	font-weight: bold; 
+	&:hover{
+		text-decoration: none;
+	}
 }

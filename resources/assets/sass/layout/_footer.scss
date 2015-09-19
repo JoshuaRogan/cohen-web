@@ -1,12 +1,23 @@
 footer {
-	@extend .container;
+	@extend .container-fluid;
+	background: $brand-primary;
+	background: linear-gradient(to right, rgba(11,79,121,1) 0%, rgba(2,125,127,1) 100%);
+
+	.footer-container{
+		@extend .container; 
+		padding-top: 30px; 
+		color: white;
+		a{
+			color: white;
+		}
+	}
 
 	ul {
 		@extend .list-unstyled, .list-inline;
 		li {
 			&:first-child {
 				font-weight: bold;
-				color: red;
+				color: white;
 
 				&:before {
 					content: none;

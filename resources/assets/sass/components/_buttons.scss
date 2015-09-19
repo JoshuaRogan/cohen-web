@@ -1,0 +1,10 @@
+button{
+	@extend .btn, .btn-primary;
+	transition: all $trans-cubic-fast; 
+
+	&.mfull{
+		@extend .center-block;
+		width: 85%; 
+		margin-bottom: 10px;
+	}
+}

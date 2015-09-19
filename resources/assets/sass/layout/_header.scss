@@ -7,7 +7,7 @@ header{
 
 	//Main Header Styles
 	.banner{
-		@extend .jumbotron, .row;
+		@extend .jumbotron;
 
 		img{
 			@extend .img-responsive;
