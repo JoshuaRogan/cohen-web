@@ -17,7 +17,7 @@
 
 @include('skeleton.banner');
 <div class="container">
-	@include('mixins.breadcrumbs');
+	@include('mixins.breadcrumbs')
 	
     <div class="row content-section">
     	<main class='main-content'>

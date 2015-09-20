@@ -1,0 +1,14 @@
+.page-patient-reviews{
+	main{
+		.reviews{
+			@extend .embed-responsive, .embed-responsive-16by9;
+			padding-bottom: 600px;
+			iframe{
+				@extend .embed-responsive-item;
+			
+			}
+		}
+		
+	}
+}
+

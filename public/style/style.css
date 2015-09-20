@@ -2339,7 +2339,7 @@ output {
   line-height: 1.428571429;
   color: #555555; }
 
-.form-control {
+.form-control, .fsField {
   display: block;
   width: 100%;
   height: 34px;
@@ -2356,28 +2356,31 @@ output {
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
-  .form-control:focus {
+  .form-control:focus, .fsField:focus {
     border-color: #66afe9;
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
-  .form-control::-moz-placeholder {
+  .form-control::-moz-placeholder, .fsField::-moz-placeholder {
     color: #999;
     opacity: 1; }
-  .form-control:-ms-input-placeholder {
+  .form-control:-ms-input-placeholder, .fsField:-ms-input-placeholder {
     color: #999; }
-  .form-control::-webkit-input-placeholder {
+  .form-control::-webkit-input-placeholder, .fsField::-webkit-input-placeholder {
     color: #999; }
   .form-control[disabled],
+  [disabled].fsField,
   .form-control[readonly],
-  fieldset[disabled] .form-control {
+  [readonly].fsField,
+  fieldset[disabled] .form-control, fieldset[disabled] .fsField {
     background-color: #eeeeee;
     opacity: 1; }
   .form-control[disabled],
-  fieldset[disabled] .form-control {
+  [disabled].fsField,
+  fieldset[disabled] .form-control, fieldset[disabled] .fsField {
     cursor: not-allowed; }
 
-textarea.form-control {
+textarea.form-control, textarea.fsField {
   height: auto; }
 
 input[type="search"] {
@@ -2385,48 +2388,59 @@ input[type="search"] {
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   input[type="date"].form-control,
+  input[type="date"].fsField,
   input[type="time"].form-control,
+  input[type="time"].fsField,
   input[type="datetime-local"].form-control,
-  input[type="month"].form-control {
+  input[type="datetime-local"].fsField,
+  input[type="month"].form-control, input[type="month"].fsField {
     line-height: 34px; }
   input[type="date"].input-sm,
   .input-group-sm > input[type="date"].form-control,
+  .input-group-sm > input[type="date"].fsField,
   .input-group-sm > input[type="date"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="date"].btn,
   .input-group-sm input[type="date"],
   input[type="time"].input-sm,
   .input-group-sm > input[type="time"].form-control,
+  .input-group-sm > input[type="time"].fsField,
   .input-group-sm > input[type="time"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="time"].btn,
   .input-group-sm input[type="time"],
   input[type="datetime-local"].input-sm,
   .input-group-sm > input[type="datetime-local"].form-control,
+  .input-group-sm > input[type="datetime-local"].fsField,
   .input-group-sm > input[type="datetime-local"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="datetime-local"].btn,
   .input-group-sm input[type="datetime-local"],
   input[type="month"].input-sm,
   .input-group-sm > input[type="month"].form-control,
+  .input-group-sm > input[type="month"].fsField,
   .input-group-sm > input[type="month"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="month"].btn,
   .input-group-sm input[type="month"] {
     line-height: 30px; }
   input[type="date"].input-lg,
   .input-group-lg > input[type="date"].form-control,
+  .input-group-lg > input[type="date"].fsField,
   .input-group-lg > input[type="date"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="date"].btn,
   .input-group-lg input[type="date"],
   input[type="time"].input-lg,
   .input-group-lg > input[type="time"].form-control,
+  .input-group-lg > input[type="time"].fsField,
   .input-group-lg > input[type="time"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="time"].btn,
   .input-group-lg input[type="time"],
   input[type="datetime-local"].input-lg,
   .input-group-lg > input[type="datetime-local"].form-control,
+  .input-group-lg > input[type="datetime-local"].fsField,
   .input-group-lg > input[type="datetime-local"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="datetime-local"].btn,
   .input-group-lg input[type="datetime-local"],
   input[type="month"].input-lg,
   .input-group-lg > input[type="month"].form-control,
+  .input-group-lg > input[type="month"].fsField,
   .input-group-lg > input[type="month"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="month"].btn,
   .input-group-lg input[type="month"] {
@@ -2503,16 +2517,19 @@ fieldset[disabled] .checkbox label {
   min-height: 34px; }
   .form-control-static.input-lg,
   .input-group-lg > .form-control-static.form-control,
+  .input-group-lg > .form-control-static.fsField,
   .input-group-lg > .form-control-static.input-group-addon,
   .input-group-lg > .input-group-btn > .form-control-static.btn,
   .input-group-lg > .input-group-btn > button.form-control-static,
   .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control,
+  .input-group-sm > .form-control-static.fsField,
   .input-group-sm > .form-control-static.input-group-addon,
   .input-group-sm > .input-group-btn > .form-control-static.btn, .input-group-sm > .input-group-btn > button.form-control-static {
     padding-left: 0;
     padding-right: 0; }
 
 .input-sm, .input-group-sm > .form-control,
+.input-group-sm > .fsField,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn, .input-group-sm > .input-group-btn > button {
   height: 30px;
@@ -2522,6 +2539,7 @@ fieldset[disabled] .checkbox label {
   border-radius: 3px; }
 
 select.input-sm, .input-group-sm > select.form-control,
+.input-group-sm > select.fsField,
 .input-group-sm > select.input-group-addon,
 .input-group-sm > .input-group-btn > select.btn {
   height: 30px;
@@ -2529,26 +2547,29 @@ select.input-sm, .input-group-sm > select.form-control,
 
 textarea.input-sm,
 .input-group-sm > textarea.form-control,
+.input-group-sm > textarea.fsField,
 .input-group-sm > textarea.input-group-addon,
 .input-group-sm > .input-group-btn > textarea.btn,
 select[multiple].input-sm, .input-group-sm > select[multiple].form-control,
+.input-group-sm > select[multiple].fsField,
 .input-group-sm > select[multiple].input-group-addon,
 .input-group-sm > .input-group-btn > select[multiple].btn {
   height: auto; }
 
-.form-group-sm .form-control {
+.form-group-sm .form-control, .form-group-sm .fsField {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px; }
 
-.form-group-sm select.form-control {
+.form-group-sm select.form-control, .form-group-sm select.fsField {
   height: 30px;
   line-height: 30px; }
 
 .form-group-sm textarea.form-control,
-.form-group-sm select[multiple].form-control {
+.form-group-sm textarea.fsField,
+.form-group-sm select[multiple].form-control, .form-group-sm select[multiple].fsField {
   height: auto; }
 
 .form-group-sm .form-control-static {
@@ -2559,6 +2580,7 @@ select[multiple].input-sm, .input-group-sm > select[multiple].form-control,
   line-height: 1.5; }
 
 .input-lg, .input-group-lg > .form-control,
+.input-group-lg > .fsField,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn, .input-group-lg > .input-group-btn > button {
   height: 46px;
@@ -2568,6 +2590,7 @@ select[multiple].input-sm, .input-group-sm > select[multiple].form-control,
   border-radius: 6px; }
 
 select.input-lg, .input-group-lg > select.form-control,
+.input-group-lg > select.fsField,
 .input-group-lg > select.input-group-addon,
 .input-group-lg > .input-group-btn > select.btn {
   height: 46px;
@@ -2575,26 +2598,29 @@ select.input-lg, .input-group-lg > select.form-control,
 
 textarea.input-lg,
 .input-group-lg > textarea.form-control,
+.input-group-lg > textarea.fsField,
 .input-group-lg > textarea.input-group-addon,
 .input-group-lg > .input-group-btn > textarea.btn,
 select[multiple].input-lg, .input-group-lg > select[multiple].form-control,
+.input-group-lg > select[multiple].fsField,
 .input-group-lg > select[multiple].input-group-addon,
 .input-group-lg > .input-group-btn > select[multiple].btn {
   height: auto; }
 
-.form-group-lg .form-control {
+.form-group-lg .form-control, .form-group-lg .fsField {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.3333333;
   border-radius: 6px; }
 
-.form-group-lg select.form-control {
+.form-group-lg select.form-control, .form-group-lg select.fsField {
   height: 46px;
   line-height: 46px; }
 
 .form-group-lg textarea.form-control,
-.form-group-lg select[multiple].form-control {
+.form-group-lg textarea.fsField,
+.form-group-lg select[multiple].form-control, .form-group-lg select[multiple].fsField {
   height: auto; }
 
 .form-group-lg .form-control-static {
@@ -2606,7 +2632,7 @@ select[multiple].input-lg, .input-group-lg > select[multiple].form-control,
 
 .has-feedback {
   position: relative; }
-  .has-feedback .form-control {
+  .has-feedback .form-control, .has-feedback .fsField {
     padding-right: 42.5px; }
 
 .form-control-feedback {
@@ -2623,22 +2649,24 @@ select[multiple].input-lg, .input-group-lg > select[multiple].form-control,
 
 .input-lg + .form-control-feedback,
 .input-group-lg > .form-control + .form-control-feedback,
+.input-group-lg > .fsField + .form-control-feedback,
 .input-group-lg > .input-group-addon + .form-control-feedback,
 .input-group-lg > .input-group-btn > .btn + .form-control-feedback,
 .input-group-lg > .input-group-btn > button + .form-control-feedback,
 .input-group-lg + .form-control-feedback,
-.form-group-lg .form-control + .form-control-feedback {
+.form-group-lg .form-control + .form-control-feedback, .form-group-lg .fsField + .form-control-feedback {
   width: 46px;
   height: 46px;
   line-height: 46px; }
 
 .input-sm + .form-control-feedback,
 .input-group-sm > .form-control + .form-control-feedback,
+.input-group-sm > .fsField + .form-control-feedback,
 .input-group-sm > .input-group-addon + .form-control-feedback,
 .input-group-sm > .input-group-btn > .btn + .form-control-feedback,
 .input-group-sm > .input-group-btn > button + .form-control-feedback,
 .input-group-sm + .form-control-feedback,
-.form-group-sm .form-control + .form-control-feedback {
+.form-group-sm .form-control + .form-control-feedback, .form-group-sm .fsField + .form-control-feedback {
   width: 30px;
   height: 30px;
   line-height: 30px; }
@@ -2655,11 +2683,11 @@ select[multiple].input-lg, .input-group-lg > select[multiple].form-control,
 .has-success.checkbox-inline label {
   color: #3c763d; }
 
-.has-success .form-control {
+.has-success .form-control, .has-success .fsField {
   border-color: #3c763d;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
-  .has-success .form-control:focus {
+  .has-success .form-control:focus, .has-success .fsField:focus {
     border-color: #2b542c;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168; }
@@ -2684,11 +2712,11 @@ select[multiple].input-lg, .input-group-lg > select[multiple].form-control,
 .has-warning.checkbox-inline label {
   color: #8a6d3b; }
 
-.has-warning .form-control {
+.has-warning .form-control, .has-warning .fsField {
   border-color: #8a6d3b;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
-  .has-warning .form-control:focus {
+  .has-warning .form-control:focus, .has-warning .fsField:focus {
     border-color: #66512c;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b; }
@@ -2713,11 +2741,11 @@ select[multiple].input-lg, .input-group-lg > select[multiple].form-control,
 .has-error.checkbox-inline label {
   color: #a94442; }
 
-.has-error .form-control {
+.has-error .form-control, .has-error .fsField {
   border-color: #a94442;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
-  .has-error .form-control:focus {
+  .has-error .form-control:focus, .has-error .fsField:focus {
     border-color: #843534;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483; }
@@ -2747,7 +2775,7 @@ select[multiple].input-lg, .input-group-lg > select[multiple].form-control,
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle; }
-  .form-inline .form-control {
+  .form-inline .form-control, .form-inline .fsField {
     display: inline-block;
     width: auto;
     vertical-align: middle; }
@@ -2758,9 +2786,9 @@ select[multiple].input-lg, .input-group-lg > select[multiple].form-control,
     vertical-align: middle; }
     .form-inline .input-group .input-group-addon,
     .form-inline .input-group .input-group-btn,
-    .form-inline .input-group .form-control {
+    .form-inline .input-group .form-control, .form-inline .input-group .fsField {
       width: auto; }
-  .form-inline .input-group > .form-control {
+  .form-inline .input-group > .form-control, .form-inline .input-group > .fsField {
     width: 100%; }
   .form-inline .control-label {
     margin-bottom: 0;
@@ -3704,7 +3732,7 @@ tbody.collapse.in {
     float: none;
     padding-left: 0;
     padding-right: 0; }
-  .input-group .form-control {
+  .input-group .form-control, .input-group .fsField {
     position: relative;
     z-index: 2;
     float: left;
@@ -3713,11 +3741,11 @@ tbody.collapse.in {
 
 .input-group-addon,
 .input-group-btn,
-.input-group .form-control {
+.input-group .form-control, .input-group .fsField {
   display: table-cell; }
   .input-group-addon:not(:first-child):not(:last-child),
   .input-group-btn:not(:first-child):not(:last-child),
-  .input-group .form-control:not(:first-child):not(:last-child) {
+  .input-group .form-control:not(:first-child):not(:last-child), .input-group .fsField:not(:first-child):not(:last-child) {
     border-radius: 0; }
 
 .input-group-addon,
@@ -3751,6 +3779,7 @@ tbody.collapse.in {
     margin-top: 0; }
 
 .input-group .form-control:first-child,
+.input-group .fsField:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > button,
@@ -3767,6 +3796,7 @@ tbody.collapse.in {
   border-right: 0; }
 
 .input-group .form-control:last-child,
+.input-group .fsField:last-child,
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn,
 .input-group-btn:last-child > button,
@@ -4136,7 +4166,7 @@ footer > .navbar-header,
       display: inline-block;
       margin-bottom: 0;
       vertical-align: middle; }
-    .navbar-form .form-control {
+    .navbar-form .form-control, .navbar-form .fsField {
       display: inline-block;
       width: auto;
       vertical-align: middle; }
@@ -4147,9 +4177,9 @@ footer > .navbar-header,
       vertical-align: middle; }
       .navbar-form .input-group .input-group-addon,
       .navbar-form .input-group .input-group-btn,
-      .navbar-form .input-group .form-control {
+      .navbar-form .input-group .form-control, .navbar-form .input-group .fsField {
         width: auto; }
-    .navbar-form .input-group > .form-control {
+    .navbar-form .input-group > .form-control, .navbar-form .input-group > .fsField {
       width: 100%; }
     .navbar-form .control-label {
       margin-bottom: 0;
@@ -5358,18 +5388,23 @@ button.list-group-item-danger {
   .panel-danger > .panel-footer + .panel-collapse > .panel-body {
     border-bottom-color: #ebccd1; }
 
-.embed-responsive {
+.embed-responsive, .page-patient-reviews main .reviews {
   position: relative;
   display: block;
   height: 0;
   padding: 0;
   overflow: hidden; }
   .embed-responsive .embed-responsive-item,
+  .page-patient-reviews main .reviews .embed-responsive-item,
   .embed-responsive .page-contact .location .map iframe,
-  .page-contact .location .map .embed-responsive iframe, .embed-responsive iframe,
+  .page-contact .location .map .embed-responsive iframe, .page-patient-reviews main .reviews .page-contact .location .map iframe,
+  .page-contact .location .map .page-patient-reviews main .reviews iframe, .page-patient-reviews main .reviews iframe, .embed-responsive iframe,
+  .page-patient-reviews main .reviews iframe,
   .embed-responsive embed,
+  .page-patient-reviews main .reviews embed,
   .embed-responsive object,
-  .embed-responsive video {
+  .page-patient-reviews main .reviews object,
+  .embed-responsive video, .page-patient-reviews main .reviews video {
     position: absolute;
     top: 0;
     left: 0;
@@ -5378,7 +5413,7 @@ button.list-group-item-danger {
     width: 100%;
     border: 0; }
 
-.embed-responsive-16by9 {
+.embed-responsive-16by9, .page-patient-reviews main .reviews {
   padding-bottom: 56.25%; }
 
 .embed-responsive-4by3 {
@@ -6920,6 +6955,584 @@ button.mfull,
   width: 20px;
   border-radius: 10px; }
 
+main .fsForm fieldset, main .fsForm fieldset legend {
+  border: 0;
+  padding: 0;
+  margin: 0; }
+
+main legend {
+  white-space: normal; }
+
+main body#FSLocal {
+  margin-top: 32px; }
+
+main body#FSLocal.fsFree {
+  margin-top: 64px; }
+
+main body#FSLocal.formThumbnailPreview {
+  margin: 25px 0 0 30px; }
+
+main body#FSLocal.formThumbnailPreview .fsForm {
+  margin: 0;
+  display: block;
+  width: 100%;
+  overflow: auto; }
+
+main body#FSLocal.formThumbnailPreview #fsHeaderImage {
+  text-align: left; }
+
+main body#FSLocal.templateThumbnailPreview {
+  margin: 70px 0 0 70px; }
+
+main body#FSLocal.templateThumbnailPreview .fsForm {
+  margin: 0; }
+
+main body#FSLocal.templateThumbnailPreview #fsHeaderImage {
+  text-align: left; }
+
+main #FSLocal fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0; }
+
+main #FSLocal .fsForm {
+  background: 0 0; }
+
+main #FSTopLogo {
+  position: absolute;
+  top: 0;
+  right: 9%;
+  margin: 0;
+  display: none; }
+
+main #FSTopLogo a {
+  width: 150px;
+  height: 50px;
+  background: url(../../images/2/formstackLogo.png) no-repeat center center;
+  display: block; }
+
+main #FSTopLogo a span {
+  display: none; }
+
+main .fsForm {
+  font: 13px/1.4 "Lucida Grande", Tahoma, "Helvetica Neue", Arial, Verdana, sans-serif;
+  width: 100%; }
+
+main body#FSLocal .fsForm {
+  display: table;
+  width: 100%;
+  margin: 18px auto; }
+
+main .fsForm .fsTable {
+  text-align: left;
+  border: 0;
+  width: 100%; }
+
+main .fsForm .fsSectionHeading {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 400;
+  margin: 0; }
+
+main .fsForm .fsCell {
+  padding: 9px 18px;
+  vertical-align: top; }
+
+main .fsSpacerRow td {
+  height: 18px; }
+
+main td.fsRowBody {
+  background-color: #fff; }
+
+main .fsPaginationContent {
+  width: 300px;
+  text-align: center;
+  margin: 0 auto 18px; }
+
+main .fsSectionRow + .fsFieldRow .fsCell {
+  padding-top: 18px; }
+
+main .fsSectionHeading {
+  font-size: 150%;
+  font-weight: 700; }
+
+main .fsLabel {
+  font-weight: 700; }
+
+main .fsLabelVertical .fsLabel {
+  display: block; }
+
+main .fsLabelHorizontal .fsLabel {
+  width: 100px;
+  margin-left: 0;
+  float: left; }
+
+main .fsFieldHorizontal {
+  float: left; }
+
+main .fsHiddenLabel {
+  display: none; }
+
+main .fsSubField {
+  float: left;
+  margin-right: 5px; }
+
+main .fsSupporting {
+  margin: 4px 0;
+  color: #656565;
+  font-size: 11px; }
+
+main .fsCallout {
+  position: absolute;
+  width: 90%;
+  z-index: 5; }
+
+main .fsCalloutTop {
+  padding-top: 21px;
+  background: url(../../images/2/calloutTop.png) no-repeat left top; }
+
+main .fsCalloutBottom {
+  height: 15px;
+  background: url(../../images/2/calloutBottom.png) no-repeat left bottom; }
+
+main .fsCalloutBody {
+  padding: 3px 12px 4px 16px;
+  background: url(../../images/2/calloutBody.png) repeat-y left center;
+  color: #fff;
+  text-shadow: 0 1px 1px #000; }
+
+main .fsCalloutBody a {
+  text-decoration: none;
+  border-bottom: 1px dotted;
+  color: #ddd; }
+
+main .fsCalloutBody a:hover {
+  color: #aaa; }
+
+main .fsSubmit input.fsSubmitButton {
+  padding: 3px;
+  margin: 0 auto;
+  clear: both; }
+
+main .fsSubmit input.fsSubmitMultipage {
+  float: right;
+  clear: none; }
+
+main #fsFooterImage {
+  clear: both;
+  padding-top: 20px; }
+
+main .fsError {
+  width: 620px;
+  margin: 15px auto;
+  font-size: 14px;
+  background-color: #fee;
+  color: #000;
+  border: 1px solid red;
+  padding: 10px;
+  clear: both;
+  text-align: center; }
+
+main #disabledError {
+  width: 300px;
+  margin: 54px auto;
+  background: #fff;
+  border: 2px solid #efefef;
+  color: #656565;
+  padding: 36px;
+  line-height: 18px; }
+
+main .fsPasswordForm td.fsRowBody {
+  text-align: center; }
+
+main .fsPasswordForm label {
+  display: block;
+  color: #656565;
+  font-size: 13px; }
+
+main .fsSSOForm label {
+  display: inline; }
+
+main .fsPasswordForm .fsRowBody input {
+  padding: 5px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700; }
+
+main .fsPasswordForm td.fsRowBody {
+  padding: 18px 0 24px; }
+
+main #fsPasswordError {
+  color: #d2010b;
+  font-weight: 700; }
+
+main .fsFieldFocused {
+  background-image: url(../../images/2/fieldFocusedBG.png); }
+
+main .fsFieldFocused div.fsSupporting, main .fsFieldFocused label.fsRequiredLabel span {
+  color: #000; }
+
+main .fsReadOnly {
+  background-image: none; }
+
+main #fsConfirmAd table {
+  width: 600px;
+  margin: 36px auto; }
+
+main #fsConfirmAd h2 {
+  margin: 0;
+  padding: 18px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  background: #42BD21;
+  color: #fff;
+  text-shadow: 0 1px 0 #000; }
+
+main #fsConfirmAd li {
+  margin-bottom: 18px; }
+
+main #fsConfirmAd img, main #fsConfirmAd ul {
+  margin: 18px; }
+
+main #fsLearnMore {
+  display: block;
+  height: 25px;
+  width: 155px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #333;
+  text-shadow: 0 1px 0 #fff;
+  background: url(../../images/2/buttonBG.png);
+  line-height: 25px;
+  margin: 18px auto; }
+
+main .fsFieldRow input[type=text], main .fsForm textarea {
+  border: 1px solid #999;
+  background-color: #fff;
+  background-image: url(../../images/2/fieldbg.png);
+  background-repeat: repeat-x;
+  background-position: top left;
+  border-top: 1px solid #7c7c7c;
+  border-left: 1px solid #c3c3c3;
+  border-right: 1px solid #c3c3c3;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+  padding: 4px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700; }
+
+main .fsReadOnly input[type=text], main .fsReadOnly textarea {
+  border: 0;
+  background-image: none; }
+
+main .fsForm input[type=file].fsField:focus, main .fsForm input[type=text].fsField:focus, main .fsForm textarea.fsField:focus {
+  border-color: #00f; }
+
+main .fsForm .fsReadOnly input[type=file].fsField:focus, main .fsForm .fsReadOnly input[type=text].fsField:focus, main .fsForm .fsReadOnly textarea.fsField:focus {
+  border: 0; }
+
+main .fsForm select {
+  font-size: 15px;
+  line-height: 18px; }
+
+main .fsRequiredMarker {
+  padding-left: 2px;
+  color: #ba0000;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: Verdana;
+  float: none; }
+
+main .hidden {
+  position: absolute;
+  left: -999em;
+  width: .1em;
+  height: .1em;
+  overflow: hidden; }
+
+main .fsPagination {
+  text-align: center;
+  margin: 25px 0; }
+
+main .fsPagination .fsNextButton {
+  float: right; }
+
+main .fsPagination .fsNextButton span:after {
+  content: " \00bb"; }
+
+main .fsPagination .fsPreviousButton span:before {
+  content: " \00ab\00a0"; }
+
+main .fsPagination .fsPreviousButton {
+  float: left; }
+
+main .fsPagination button, main .fsPagination input {
+  font-size: 16px; }
+
+main .fsForm .fsLabel {
+  font-size: 13px; }
+
+main .fsSectionRow td.fsRowBody {
+  background-image: url(../../images/2/stockTemplates/tableTopGradient.png);
+  background-repeat: repeat-x;
+  background-position: left top;
+  padding-top: 18px; }
+
+main td.fsRowClose, main td.fsRowOpen {
+  width: 2px; }
+
+main .fsRowTop td {
+  height: 2px;
+  background-color: transparent; }
+
+main .fsRowBottom td {
+  height: 3px;
+  background-color: transparent; }
+
+main .fsRowOpen {
+  background: url(../../images/2/stockTemplates/tableBodyLeft.png) top right repeat-y; }
+
+main .fsRowClose {
+  background: url(../../images/2/stockTemplates/tableBodyRight.png) top left repeat-y; }
+
+main .fsRowBody {
+  background-color: #fff; }
+
+main .fsRowTop .fsRowOpen {
+  background: url(../../images/2/stockTemplates/tableTopLeft.png) right bottom no-repeat; }
+
+main .fsRowTop .fsRowBody {
+  background: url(../../images/2/stockTemplates/tableTopMiddle.png) left bottom repeat-x; }
+
+main .fsRowTop .fsRowClose {
+  background: url(../../images/2/stockTemplates/tableTopRight.png) left bottom no-repeat; }
+
+main .fsRowBottom .fsRowOpen {
+  background: url(../../images/2/stockTemplates/tableBottomLeft.png) right top no-repeat; }
+
+main .fsRowBottom .fsRowClose {
+  background: url(../../images/2/stockTemplates/tableBottomRight.png) left top no-repeat; }
+
+main .fsRowBottom .fsRowBody {
+  background: url(../../images/2/stockTemplates/tableBottomMiddle.png) repeat-x left top; }
+
+main .fsNoShadow .fsRowBottom .fsRowBody, main .fsNoShadow .fsRowClose, main .fsNoShadow .fsRowOpen, main .fsNoShadow .fsRowTop .fsRowBody {
+  background-image: none; }
+
+main .fsNoSpacing .fsForm .fsFirstSection .fsRowBottom, main .fsNoSpacing .fsForm .fsFirstSection .fsRowBottom * {
+  display: none;
+  padding: 0;
+  margin: 0; }
+
+main .fsNoSpacing .fsForm .fsLastSection .fsRowTop, main .fsNoSpacing .fsForm .fsLastSection .fsRowTop *, main .fsNoSpacing .fsForm .fsMiddleSection .fsRowBottom, main .fsNoSpacing .fsForm .fsMiddleSection .fsRowBottom *, main .fsNoSpacing .fsForm .fsMiddleSection .fsRowTop, main .fsNoSpacing .fsForm .fsMiddleSection .fsRowTop * {
+  display: none; }
+
+main .fsForm .fsTable {
+  margin: 0;
+  padding: 0; }
+
+main .fsNoSpacing .fsForm .fsLastSection .fsSectionRow td.fsRowBody, main .fsNoSpacing .fsForm .fsMiddleSection .fsSectionRow td.fsRowBody {
+  background-image: none; }
+
+main td.fsValidationError {
+  background-color: #fcc !important; }
+
+main .fsValidationError .fsLabel {
+  color: #ba0000;
+  padding-left: 20px;
+  background-image: url(../../images/2/validationAlert.png);
+  background-repeat: no-repeat;
+  background-position: left bottom; }
+
+main .fsCounter {
+  position: absolute;
+  font-size: 18px;
+  color: #656565;
+  font-family: Georgia, Serif;
+  text-align: right; }
+
+main .captchaError {
+  background-color: #fcc; }
+
+main .recaptchatable img:hover {
+  box-shadow: 0 0 0 1px red;
+  -moz-box-shadow: 0 0 0 1px red;
+  -webkit-box-shadow: 0 0 0 1px red; }
+
+main .fsResumeLink {
+  font-weight: 700;
+  font-size: 14px; }
+
+main .fsProgress {
+  border: 1px solid #ccc;
+  width: 104px;
+  margin: 9px auto; }
+
+main .fsProgressBarContainer {
+  width: 100px;
+  height: 10px;
+  margin: 1px;
+  border: 1px solid #ddd;
+  background: #f4f4f4;
+  position: relative;
+  text-align: left; }
+
+main .fsProgressBar {
+  width: 0;
+  height: 10px;
+  background: #888; }
+
+main .fsProgressText {
+  z-index: 10;
+  line-height: 10px;
+  font-size: 9px;
+  text-align: center;
+  width: 100px;
+  margin-top: -10px;
+  padding-bottom: 2px;
+  color: #555; }
+
+main .fsSaveIncomplete {
+  font-size: 9px;
+  color: #656565;
+  background-color: #fafafa;
+  padding: 2px; }
+
+main .fsSaveIncomplete:visited {
+  color: #656565; }
+
+main .fsSaveIncomplete:hover {
+  color: #000; }
+
+main .fsHiddenCell *, main .fsHiddenCell .fsLabel {
+  display: none; }
+
+main #fsSubmissionCheckmark {
+  width: 75px;
+  height: 68px;
+  float: left;
+  background: url(../../images/2/confirmationCheckmark.png); }
+
+main .fsBlankSection {
+  display: none; }
+
+main .fsMatrix {
+  margin: 6px 0;
+  border-collapse: collapse; }
+
+main .fsMatrix td, main .fsMatrix th {
+  text-align: center;
+  padding: 4px 0;
+  font-weight: 400;
+  width: 75px;
+  border-bottom: dotted 1px #ccc; }
+
+main .fsMatrix th {
+  font-size: 11px; }
+
+main .fsMatrix th.fsMatrixLabel {
+  text-align: left;
+  padding-right: 8px;
+  width: 200px; }
+
+main .fsMatrixCol1 {
+  background: url(../../images/2/black_translucent.png); }
+
+main .fsMatrixCol2, main .fsMatrixLabel {
+  background: url(../../images/2/white_translucent.png); }
+
+main .fsCurrency {
+  font-size: 16px;
+  color: #555; }
+
+main .fsSliderBg {
+  position: relative;
+  background: url(../../images/2/slider-bg.gif) no-repeat 5px 0;
+  height: 28px;
+  width: 108px;
+  float: left; }
+
+main .fsSliderBg .fsSliderThumb {
+  position: absolute;
+  cursor: default;
+  top: 4px; }
+
+main .fsSliderValue {
+  float: left;
+  margin-left: 15px;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #f7f7f7;
+  color: #333;
+  padding: 5px; }
+
+main input.fsFormatCreditCard {
+  margin-right: 10px; }
+
+main img.fsCreditCardLogo {
+  vertical-align: top;
+  border: solid 1px #777; }
+
+main .discountcodeMsg {
+  font-style: italic;
+  font-size: x-small;
+  display: block; }
+
+main #recaptcha_area {
+  margin-left: auto;
+  margin-right: auto; }
+
+main #mobile-alert p {
+  width: 100%;
+  text-align: center !important; }
+
+main #mobile-alert input[type=submit] {
+  background: 0 0;
+  border: 0;
+  color: red;
+  text-decoration: underline;
+  cursor: pointer; }
+
+main .social-autofill {
+  text-align: center; }
+
+main .social-autofill a {
+  border-radius: 4px;
+  background-image: -o-linear-gradient(-89deg, #FFF 0, #E0E0E0 100%);
+  background-image: -moz-linear-gradient(-89deg, #FFF 0, #E0E0E0 100%);
+  background-image: -ms-linear-gradient(-89deg, #FFF 0, #E0E0E0 100%);
+  background-image: linear-gradient(-179deg, #FFF 0, #E0E0E0 100%);
+  border: 1px solid #D1D1D1;
+  padding: 0.4em 1em;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  margin: 1em 0;
+  -o-text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
+  -moz-text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
+  -ms-text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8); }
+
+main .social-autofill a:hover {
+  background-image: -o-linear-gradient(-89deg, #FFF 0, #EFEFEF 100%);
+  background-image: -moz-linear-gradient(-89deg, #FFF 0, #EFEFEF 100%);
+  background-image: -ms-linear-gradient(-89deg, #FFF 0, #EFEFEF 100%);
+  background-image: linear-gradient(-179deg, #FFF 0, #EFEFEF 100%);
+  border: 1px solid #afafaf; }
+
+main .social-autofill a span {
+  padding-left: 2em;
+  display: inline-block; }
+
+main .social-autofill .twitter_autofill span {
+  background: url(../../images/icon-twitter.png) no-repeat; }
+
+main .social-autofill .facebook_autofill span {
+  background: url(../../images/icon-facebook.png) no-repeat; }
+
 /**
  * Contact Us Page Style
  * @author Josh Rogan 
@@ -6975,3 +7588,6 @@ button.mfull,
   @media (min-width: 1200px) {
     .page-contact .catering .credit-accepted {
       font-size: 2.25em; } }
+
+.page-patient-reviews main .reviews {
+  padding-bottom: 600px; }
