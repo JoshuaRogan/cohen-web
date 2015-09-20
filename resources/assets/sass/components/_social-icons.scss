@@ -18,8 +18,10 @@ $stumbleupon: #EB4823;
 $yahoo: #7B0099;
 $blogger: #fb8f3d;
 $soundcloud: #ff3a00;
+$yelp: #C41200;
 
 .social-icons {
+	@extend .list-unstyled, .list-inline;
 	.fa{
 		font-size: 1.25em;
 	}
@@ -43,4 +45,11 @@ $soundcloud: #ff3a00;
 
 .fa-youtube, .fa-youtube-square, .youtube{
 	color: $youtube;
+}
+
+.yelp{
+	color: $yelp;
+	&:hover{
+		color: darken($yelp, 20%);
+	}
 }

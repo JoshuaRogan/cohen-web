@@ -1,8 +1,16 @@
 .main-content {
 	@extend .col-sm-8;
 
+	&.full{
+		@extend .col-sm-12;
+	}
+
 	a {
 
+	}
+
+	.footer-text{
+		font-size: 12px;
 	}
 }
 .sidebar {

@@ -1,0 +1,58 @@
+/**
+ * Contact Us Page Style
+ * @author Josh Rogan 
+ */
+.page-contact{
+	.location{
+		h3{
+			padding-left: 15px; 
+			padding-right: 15px; 
+		}
+		@extend .row;
+		.map{
+			@extend .col-sm-8;
+			
+			iframe{
+				transition: opacity $trans-cubic-fast;
+				@extend .embed-responsive-item;
+				width: 100%;
+				@include responsive-man(max-height, 250px, 300px, 350px, 400px);
+				padding-bottom: 10px;
+				padding-left: 0; 
+				padding-right: 0;
+				// opacity: 0; 
+
+				&.active{
+					opacity: 1;
+				}
+			}
+
+			.loader{
+				position: relative; 
+				z-index: -1;
+				height: 0;
+				text-align: center;
+			}
+		}
+
+		.vcard{
+			@extend .col-sm-4;
+			.meta{
+				a{
+					display: block;
+				}
+
+			}
+		}
+	}
+
+	.catering{
+		.credit-accepted{
+			@extend .list-inline; 
+			text-align: center;
+			width: 100%;
+			@include responsive-auto(font-size, 2.25em);
+
+		}
+	}
+}

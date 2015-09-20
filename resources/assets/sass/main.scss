@@ -9,6 +9,9 @@
 @import "vendor/bootstrap";
 
 //Import Materialize
+@import "vendor/materialize";
+
+//Import Owl Carousel
 @import "vendor-extensions/owlcarousel";
 @import "vendor/owlcarousel";
 
@@ -22,7 +25,10 @@
 @import "components/breadcrumbs";
 @import "components/buttons";
 @import "components/social-icons";
+@import "components/google_maps";
 
 //Pages
 @import "pages/welcome";
+@import "pages/contact";
+
 

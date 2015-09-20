@@ -35,7 +35,7 @@
 
 
 	<!--CONTENT-->
-	<div id="main" class="@yield('pageclass') container-fluid"> 
+	<div id="main" class="@yield('pageclass')"> 
 		<!--Flash Messages -->
 		@if(Session::has('flash_success'))
 			<div class='container flash-messages'>

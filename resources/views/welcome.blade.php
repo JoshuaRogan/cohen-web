@@ -14,20 +14,10 @@
 @stop
 
 @section('content')
+
+@include('skeleton.banner');
 <div class="container">
-	<div class="breadcrumbs">
-		<ol class="breadcrumb">
-		  <li><a href="#">Home</a></li>
-		  <li><a href="#">Library</a></li>
-		  <li class="active">Data</li>
-		</ol>
-		<ul class='social-icons'>
-			<a href="#"><i class="fa fa-facebook-official"></i></a>
-			<a href="#"><i class="fa fa-twitter"></i></a>
-			<a href="#"><i class="fa fa-google-plus-square"></i></a>
-			<a href="#"><i class="fa fa-envelope"></i></a>
-		</ul>
-	</div>
+	@include('mixins.breadcrumbs');
 	
     <div class="row content-section">
     	<main class='main-content'>
@@ -38,25 +28,8 @@
 			<p>Are you ready to imagine yourself with that priceless smile we’ve been talking about? Call Dr. Mitchell S. Cohen in Scranton at 570-346-2132, in Pittston at 570-654-7117 and in Wilkes-Barre at 570-822-7700. For your convenience, you can also use our online Request an Appointment form to schedule your free initial consultation.</p>
     	</main>
 
-    	<aside class='sidebar'>
-    		<h2> Side Bar Content </h2>
-    		<div class="button-wrapper">
-	    		<button> <span class='icon'><i class="fa fa-calendar-plus-o"></i></span> Request Appointment</button>
-	    		<button> <span class='icon'><i class="fa fa-star"></i></span> Patient Reviews </button>
-	    	</div>
-
-    		<h3 class='youtube'> <i class="fa fa-youtube-square"></i> iOC Scanner </h3>
-    		<div class="embed-responsive embed-responsive-16by9">
-			  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/iZcwXGi1CTs"></iframe>
-			</div>
-			<div class="clearfix">&nbsp;</div>
-			<div class="button-wrapper">
-			<button> <span class='icon'><i class="fa fa-file-text"></i></span> Dentist/Physician Referral </button>
-    		<button> <span class='icon'><i class="fa fa-newspaper-o"></i></span> What's Happening!</button>
-    		<button> <span class='icon'><i class="fa fa-book"></i></span> Dental Library </button>
-    		<button> <span class='icon'><i class="fa fa-files-o"></i></span> eBrochure </button>
-    		</div>
-    	</aside>
+    	@include('mixins.sidebar')
+    	
     </div>
 </div>
 @stop
