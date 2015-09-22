@@ -22,34 +22,36 @@ $yelp: #C41200;
 
 .social-icons {
 	@extend .list-unstyled, .list-inline;
-	.fa{
+
+	.fa {
 		font-size: 1.25em;
 	}
 }
-
 .fa-envelope {
 	color: orange;
 }
-
 .fa-facebook-official {
 	color: $facebook;
 }
-
 .fa-twitter {
 	color: $twitter;
 }
-
 .fa-google-plus-square {
 	color: $googleplus;
 }
-
-.fa-youtube, .fa-youtube-square, .youtube{
+.fa-youtube, .fa-youtube-square, .youtube {
 	color: $youtube;
 }
-
-.yelp{
+.yelp {
 	color: $yelp;
-	&:hover{
+
+	&:hover {
 		color: darken($yelp, 20%);
 	}
+}
+.credit-accepted {
+	@extend .list-inline;
+	text-align: center;
+	width: 100%;
+	@include responsive-auto(font-size, 2.25em);
 }

@@ -1,0 +1,13 @@
+div.spinner{
+	@extend .block-center, .text-center;
+	.preloader-wrapper{
+		transition: opacity $trans-cubic-fast; 
+		opacity: 1;
+
+		&.loaded{
+			display: none;
+			opacity: 0;
+		}    
+	    
+	}
+}

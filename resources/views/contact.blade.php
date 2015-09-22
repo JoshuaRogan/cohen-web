@@ -20,7 +20,9 @@
 </div>
 
 <div class="container">
-	{{-- @include('mixins.breadcrumbs'); --}}
+	   @include('mixins.breadcrumbs',array('current' => 'Contact Us' ))
+
+
 
     <div class="row content-section">
     	<main class='main-content full'>

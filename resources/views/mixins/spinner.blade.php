@@ -1,4 +1,4 @@
-<div class="preloader-wrapper big active">
+<div class='spinner'><div class="preloader-wrapper big active">
     <div class="spinner-layer spinner-blue">
       <div class="circle-clipper left">
         <div class="circle"></div>
@@ -38,4 +38,4 @@
         <div class="circle"></div>
       </div>
     </div>
-</div>
+</div></div>

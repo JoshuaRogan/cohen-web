@@ -14,23 +14,24 @@
 //Import Owl Carousel
 @import "vendor-extensions/owlcarousel";
 @import "vendor/owlcarousel";
+@import "vendor/form-stack";
 
 //Base
 @import "base/typography";
 
 //Layout
 @import "layout/layout";
+@import "layout/sidebar";
 
 //Components
 @import "components/breadcrumbs";
 @import "components/buttons";
 @import "components/social-icons";
 @import "components/google_maps";
-@import "components/form-stack";
+@import "components/spinner";
 
 //Pages
 @import "pages/welcome";
 @import "pages/contact";
 @import "pages/patient-reviews";
-
-
+@import "pages/person";

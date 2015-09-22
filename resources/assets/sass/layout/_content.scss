@@ -10,7 +10,11 @@
 	}
 
 	.footer-text{
+		border-top: 1px solid $brand-primary;
+		margin-top: 10px;
+		padding-top: 10px;
 		font-size: 12px;
+		font-weight: 300;
 	}
 }
 .sidebar {
