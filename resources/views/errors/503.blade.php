@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Be right back.</title>
+        <title>404 - Page Not Found</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
         <style>
             html, body {
@@ -16,7 +17,6 @@
                 width: 100%;
                 color: #B0BEC5;
                 display: table;
-                font-weight: 100;
                 font-family: 'Lato';
             }
 
@@ -32,15 +32,28 @@
             }
 
             .title {
-                font-size: 72px;
-                margin-bottom: 40px;
+                font-size: 9vw;
+                font-weight: 900;
+            }
+
+            .sub-title a{
+                font-weight: 500;
+                font-size: 3vw;
+            }
+
+            .logo{
+                text-align: center;
             }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Be right back.</div>
+                <div class="row">
+                    <div class="logo"><img src="/img/components/mitchell_logo.png" alt="logo" class='img-responsive center-block'></div>
+                    <div class="title">503 Be Right Back</div>
+                    <div class="sub-title"><a href='/'>Head back to the home page?</a></div>
+                </div>
             </div>
         </div>
     </body>

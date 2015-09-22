@@ -1,7 +1,7 @@
 <div class="breadcrumbs">
 	
 		<ol class="breadcrumb">
-		<li><a href="#">Home</a></li>
+		<li><a href="/">Home</a></li>
 		@if (isset($pages))
 			@foreach ($pages as $key => $value)
 				<li> <a href='{{$key}}'>{{$value}}</a></li>

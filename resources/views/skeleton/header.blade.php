@@ -19,18 +19,21 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Early Care &amp; Adult Orthodontic</a></li>
-                            <li><a href="#">Traditional Braces</a></li>
-                            <li><a href="#">Invisalign</a></li>
+                            <li> <a href='/our-services/adult-orthodontics'>Adult Orthodontics</a></li>
+                            <li> <a href='/our-services/early-intervention'>Early Intervention</a></li>
+                            <li> <a href='/our-services/invisalign'>Invisalign</a></li>
+                            <li> <a href='/our-services/invisalign-teen'>Invisalign Teen</a></li>
+                            <li> <a href='/our-services/traditional-braces'>Traditional Braces</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">For Patients <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">FAQs</a></li>
+                            <li><a href="/for-patients/your-first-visit">Your First Visit</a></li>
+                            <li><a href="/for-patients/faqs">FAQs</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">About Us </a></li>
+                    <li><a href="/about-us">About Us </a></li>
                     <li><a href="#">Smile Gallery </a></li>
                     <li><a href="/contact">Locations </a></li>
                 </ul>

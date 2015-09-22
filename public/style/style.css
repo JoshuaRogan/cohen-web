@@ -1125,7 +1125,7 @@ figure {
 img {
   vertical-align: middle; }
 
-.img-responsive, .banner img, .banner .left img, .page-our-team .team > section img {
+.img-responsive, .banner img, .banner .left img, .page-our-team .team > section img, .page-before-after .owl-carousel img {
   display: block;
   max-width: 100%;
   height: auto; }

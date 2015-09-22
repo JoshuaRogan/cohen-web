@@ -1,6 +1,6 @@
 var cohen = cohen || {};
 cohen.init_slider = function() {
-    $('.owl-carousel').owlCarousel({
+    $('.banner .owl-carousel').owlCarousel({
         loop: true,
         margin: 0,
         items: 1,
@@ -16,7 +16,8 @@ cohen.init_about_sliders = function() {
         loop: true,
         margin: 0,
         items: 1,
-        nav: false
+        nav: false, 
+
     });
 };
 /**
@@ -30,6 +31,24 @@ cohen.init_nav = function() {
         $(this).removeClass('open');
     });
 };
+
+
+/**
+ * Init the smile Gallery
+ * 
+ */
+cohen.init_smile_gallery = function() {
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 0,
+        items: 1,
+        nav: true,
+        dots: false,
+        autoplay: true,
+
+    });
+};
+
 /**
  * Initialize the google maps map 
  * @return {[type]} [description]

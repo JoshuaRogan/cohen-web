@@ -1,0 +1,7 @@
+.page-before-after{
+	.owl-carousel{
+		img{
+			@extend .img-responsive;
+		}
+	}
+}

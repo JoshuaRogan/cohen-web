@@ -27,8 +27,12 @@ $( document ).ready(function(){
 		}, 300);
 	}
 
-	if($('.page-about-us').length()){
-		
+	if($('.page-before-after').length){
+		cohen.init_smile_gallery();
+	}
+
+	if($('.page-about-us').length){
+		cohen.init_about_sliders();
 	}
 
 
