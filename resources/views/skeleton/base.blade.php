@@ -70,7 +70,7 @@
 			
 		@endif
 		<script src="{{asset('/js/app.min.js')}}"></script>
-		
+	
     @show
 	<!--LAZY SCRIPTS --> 
 

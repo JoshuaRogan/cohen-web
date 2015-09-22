@@ -124,7 +124,17 @@ function initMap() {
                 lng: office[2]
             },
             title: 'Hello World!',
-            animation: google.maps.Animation.DROP
+            // animation: google.maps.Animation.DROP,
+            icon: {
+                path: fontawesome.markers.MAP_MARKER,
+                scale: 0.8,
+                strokeWeight: 0.3,
+                strokeColor: '#fff',
+                strokeOpacity: 1,
+                fillColor: '#61C5C2',
+                fillOpacity: 0.9,
+            }
+
         });
 
         var infowindow = new google.maps.InfoWindow();
