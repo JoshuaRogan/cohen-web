@@ -1,39 +1,64 @@
 footer {
 	@extend .container-fluid;
 	background: $brand-primary;
-	background: linear-gradient(to right, rgba(11,79,121,1) 0%, rgba(2,125,127,1) 100%);
+	background: linear-gradient(to right, rgba(11, 79, 121, 1) 0%, rgba(2, 125, 127, 1) 100%);
 
-	.footer-container{
-		@extend .container; 
-		padding-top: 30px; 
+	.footer-container {
+		@extend .container;
+		padding-top: 30px;
 		color: white;
-		a{
-			color: white;
+
+		> div {
+			h2 a {
+				color: $cohen-light-blue;
+				font-weight: 300;
+			}
+		}
+		.qoute {
+			@extend .col-md-12;
+			text-align: center;
+		}
+		.locations {
+			@extend .col-md-12, .clearfix;
+			text-align: center
+
+		}
+		.about {
+			@extend .col-md-2
+		}
+		.sitemap {
+			@extend .col-md-4;
+		}
+		.services {
+			@extend .col-md-3;
+		}
+		.copyright {
+			@extend .col-md-12, .clearfix;
+			text-align: center
+		}
+		li {
+			transition: transform .2s linear;
+
+			a {
+				transition: transform .2s linear;
+				// position: absolute;
+				height: 1em;
+				color: white;
+			}
+			&:hover {
+				transform: scale(1.1);
+			}
 		}
 	}
-
 	ul {
 		@extend .list-unstyled, .list-inline;
+
 		li {
 			&:first-child {
 				font-weight: bold;
 				color: white;
-
-				&:before {
-					content: none;
-				}
 			}
-
-			&:nth-child(2) {
-				&:before {
-					content: none;
-				}
-			}
-
-			&:before {
-				content: " | ";
-			}
+		
 		}
 	}
-
 }

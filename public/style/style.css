@@ -1587,7 +1587,7 @@ pre {
   .row:after, .breadcrumbs:after, .page-contact .location:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .banner .left, .sidebar, .page-contact .location .vcard, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .banner .right, .main-content, .page-contact .location .map, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, button.mfull, .mfull.fsSubmitButton, .sidebar button, .sidebar .fsSubmitButton, aside.sidebar .anchor-button, .col-sm-12, .main-content.full, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, footer .footer-container .about, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, footer .footer-container .services, .col-lg-3, .col-xs-4, .col-sm-4, .banner .left, .sidebar, .page-contact .location .vcard, .col-md-4, footer .footer-container .sitemap, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .banner .right, .main-content, .page-contact .location .map, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, button.mfull, .mfull.fsSubmitButton, .sidebar button, .sidebar .fsSubmitButton, aside.sidebar .anchor-button, .col-sm-12, .main-content.full, .col-md-12, footer .footer-container .qoute, footer .footer-container .locations, footer .footer-container .copyright, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -1856,15 +1856,15 @@ pre {
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, footer .footer-container .about, .col-md-3, footer .footer-container .services, .col-md-4, footer .footer-container .sitemap, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, footer .footer-container .qoute, footer .footer-container .locations, footer .footer-container .copyright {
     float: left; }
   .col-md-1 {
     width: 8.3333333333%; }
-  .col-md-2 {
+  .col-md-2, footer .footer-container .about {
     width: 16.6666666667%; }
-  .col-md-3 {
+  .col-md-3, footer .footer-container .services {
     width: 25%; }
-  .col-md-4 {
+  .col-md-4, footer .footer-container .sitemap {
     width: 33.3333333333%; }
   .col-md-5 {
     width: 41.6666666667%; }
@@ -1880,7 +1880,7 @@ pre {
     width: 83.3333333333%; }
   .col-md-11 {
     width: 91.6666666667%; }
-  .col-md-12 {
+  .col-md-12, footer .footer-container .qoute, footer .footer-container .locations, footer .footer-container .copyright {
     width: 100%; }
   .col-md-pull-0 {
     right: auto; }
@@ -6121,12 +6121,14 @@ button.close, .close.fsSubmitButton, aside.sidebar .close.anchor-button {
     bottom: 20px; } }
 
 .clearfix:before,
+footer .footer-container .locations:before,
+footer .footer-container .copyright:before,
 .page-our-team .team > section:before,
-.clearfix:after, .page-our-team .team > section:after {
+.clearfix:after, footer .footer-container .locations:after, footer .footer-container .copyright:after, .page-our-team .team > section:after {
   content: " ";
   display: table; }
 
-.clearfix:after, .page-our-team .team > section:after {
+.clearfix:after, footer .footer-container .locations:after, footer .footer-container .copyright:after, .page-our-team .team > section:after {
   clear: both; }
 
 .center-block, .banner .left, .banner .left img, button.mfull, .mfull.fsSubmitButton, .sidebar button, .sidebar .fsSubmitButton, aside.sidebar .anchor-button, .page-our-team .team > section img {
@@ -6911,17 +6913,26 @@ footer {
   footer .footer-container {
     padding-top: 30px;
     color: white; }
-    footer .footer-container a {
-      color: white; }
+    footer .footer-container > div h2 a {
+      color: #61C5C2;
+      font-weight: 300; }
+    footer .footer-container .qoute {
+      text-align: center; }
+    footer .footer-container .locations {
+      text-align: center; }
+    footer .footer-container .copyright {
+      text-align: center; }
+    footer .footer-container li {
+      transition: transform 0.2s linear; }
+      footer .footer-container li a {
+        transition: transform 0.2s linear;
+        height: 1em;
+        color: white; }
+      footer .footer-container li:hover {
+        transform: scale(1.1); }
   footer ul li:first-child {
     font-weight: bold;
     color: white; }
-    footer ul li:first-child:before {
-      content: none; }
-  footer ul li:nth-child(2):before {
-    content: none; }
-  footer ul li:before {
-    content: " | "; }
 
 .banner .left {
   /* Only Smallest Devcies */ }
