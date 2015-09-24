@@ -6,6 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 	<meta name="author" content="Josh Rogan">
 	<meta name="description" content="@yield('description')" >
+
+	<meta property="og:url" content="http://{{$_SERVER['HTTP_HOST']}}{{$_SERVER['REQUEST_URI']}}" />
+	<meta property="og:type" content="article"/>
+	<meta property="og:title" content="@yield('title')" />
+	<meta property="og:description"content="@yield('description')" />
+	<meta property="og:image" content="http://{{$_SERVER['HTTP_HOST']}}@yield('meta-image', '/img/components/mitchell_logo.png')" />
 	
 	<title> Cohen | @yield('title')</title>
 
@@ -18,7 +24,7 @@
 	<!-- STYLESHEETS  -->
 	@section('styles')
 		<link rel="stylesheet" type="text/css" href="/style/style.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		{{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> --}}
     @show
 
 	

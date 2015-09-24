@@ -3,6 +3,8 @@
 	<div class="button-wrapper">
 		<a class="anchor-button" href="/request-an-appointment"><span class='icon'><i class="fa fa-calendar-plus-o"></i></span> Request Appointment</a>
 		<a class="anchor-button" href="/patient-reviews"><span class='icon'><i class="fa fa-star"></i></span> Patient Reviews</a>
+		<a class="anchor-button" href="/physician-referral"><span class='icon'><i class="fa fa-file-text"></i></span> Physician Referral </a>
+
 	</div>
 
 	<h3 class='youtube'> <i class="fa fa-youtube-square"></i> iOC Scanner </h3>
@@ -12,9 +14,14 @@
 	<div class="clearfix">&nbsp;</div>
 
 	<div class="button-wrapper">
-		<a class="anchor-button" href="/physician-referral"><span class='icon'><i class="fa fa-file-text"></i></span> Physician Referral </a>
-		<a class="anchor-button" href="#"><span class='icon'><i class="fa fa-newspaper-o"></i></span>What's Happening!</a>
-		<a class="anchor-button" href="#"><span class='icon'><i class="fa fa-book"></i></span> Dental Library</a>
-		<a class="anchor-button" href="#"><span class='icon'><i class="fa fa-files-o"></i></span> eBrochure</a>
+		{{-- <a class="anchor-button" href="#"><span class='icon'><i class="fa fa-newspaper-o"></i></span>What's Happening!</a> --}}
+		{{-- <a class="anchor-button" href="#"><span class='icon'><i class="fa fa-book"></i></span> Dental Library</a> --}}
+		{{-- <a class="anchor-button" href="#"><span class='icon'><i class="fa fa-files-o"></i></span> eBrochure</a> --}}
 	</div>
+
+	<a href='/before-and-after-gallery' class="smile-gallery">
+		<h3>Smile Gallery</h3>
+		@include('icons.tooth-crack')
+		@include('icons.shiny-tooth-blue')
+	</a>
 </aside>

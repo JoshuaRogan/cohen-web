@@ -27,11 +27,11 @@
             <p>Dr. Cohen's ultimate goal is to help you live healthier, look better and feel better about yourself. You’ll find him and his staff flexible and very accommodating. We are always here for you in the rare event you need us in an emergency. We will do whatever it takes to make your orthodontic experience a pleasant one. And we will provide you with comprehensive orthodontic services that include:</p>
 
             <ul>
-                <li> <a href="#">Early Intervention </a></li>
-                <li> <a href="#">Tradtional Braces </a></li>
-                <li> <a href="#">Invisalign Teen </a></li>
-                <li> <a href="#">Invisalign </a></li>
-                <li> <a href="#">Adult Orthodontics </a></li>
+                <li> <a href="/our-services/early-intervention">Early Intervention </a></li>
+                <li> <a href="/our-services/traditional-braces">Tradtional Braces </a></li>
+                <li> <a href="/our-services/invisalign-teen">Invisalign Teen </a></li>
+                <li> <a href="/our-services/invisalign">Invisalign </a></li>
+                <li> <a href="/our-services/adult-orthodontics">Adult Orthodontics </a></li>
             </ul>
             @include( 'mixins.footer', array( 'placer' => 'For priceless smiles at affordable fees,' ) )
     	</main>

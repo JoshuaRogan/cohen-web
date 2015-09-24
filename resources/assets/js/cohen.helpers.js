@@ -4,7 +4,8 @@ cohen.init_slider = function() {
         loop: true,
         margin: 0,
         items: 1,
-        nav: false
+        nav: false,
+        autoplay: true
     });
 };
 /**
@@ -16,22 +17,11 @@ cohen.init_about_sliders = function() {
         loop: true,
         margin: 0,
         items: 1,
-        nav: false, 
+        nav: false,
+        autoplay: true 
 
     });
 };
-/**
- * Activate dropdown on hovers
- * @return {[type]} [description]
- */
-cohen.init_nav = function() {
-    $('.dropdown').hover(function() {
-        $(this).addClass('open');
-    }, function() {
-        $(this).removeClass('open');
-    });
-};
-
 
 /**
  * Init the smile Gallery
@@ -110,6 +100,18 @@ cohen.clear_imported_external_styles = function(domain, interval, timesToWait, c
     }, timer);
 };
 
+/**
+ * Init the share icons across the site in the sidebar
+ * 
+ */
+cohen.init_share_icons = function(){
+    
+}
+
+/**
+ * INitalize the google map
+ * @return {[type]} [description]
+ */
 function initMap() {
     var styleArray = [{
         "featureType": "administrative",

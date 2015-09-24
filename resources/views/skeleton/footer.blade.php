@@ -4,7 +4,7 @@
 		
 
 		<div class="services">
-			<h2><a href='#'>For Patients</a></h2>
+			<h2><a href='/for-patients/faqs'>For Patients</a></h2>
 			<ul>
 				<li><a href='/for-patients/faqs'>FAQs </a></li>
 				<li><a href='/for-patients/your-first-visit'>Early Intervention </a></li>
@@ -13,7 +13,7 @@
 		</div>
 
 		<div class="about">
-			<h2> <a href='#'>About Us</a></h2>
+			<h2> <a href='/about-us'>About Us</a></h2>
 			<ul> 
 				<li><a href='/contact'>Locations</a></li>
 				<li><a href='/meet-your-team'>Meet Your Team</a></li>
@@ -21,7 +21,7 @@
 		</div>
 
 		<div class="services">
-			<h2><a href='#'>Services</a></h2>
+			<h2><a href='/our-services/'>Services</a></h2>
 			<ul>
 				<li> <a href='/our-services/invisalign'>Invisalign</a></li>
 				<li> <a href='/our-services/adult-orthodontics'>Adult Orthodontics</a></li>
@@ -33,7 +33,7 @@
 
 
 		<div class="sitemap">
-			<h2><a href='#'>Sitemap</a></h2>
+			<h2><a href='/sitemap'>Sitemap</a></h2>
 			<ul>
 				<li><a href='/'>Home</a></li>
 				<li><a href='about-us'>About Us</a></li>
@@ -70,7 +70,9 @@
 		<div class="clearfix"></div>
 
 		<div class="copyright">
-			Copyright ©  {{date("Y")}} Mitchell Cohen Orthodontics. <strong>All rights reserved</strong>.
+			<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>.
+
+			Copyright ©  {{date("Y")}} Mitchell Cohen Orthodontics. <strong>All rights reserved</strong> 
 		</div>
 	</div>
 </footer>

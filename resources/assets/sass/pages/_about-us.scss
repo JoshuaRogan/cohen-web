@@ -1,0 +1,14 @@
+.page-about-us {
+	.meet-team-wrap {
+		display: block;
+		@extend .text-center;
+		img.meet-team {
+			height: 250px;
+			width: 250px;
+		}
+
+		h3{
+			margin-top: 0;
+		}
+	}
+}

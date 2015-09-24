@@ -31,8 +31,8 @@ $navbar-default-brand-hover-color: white;
 $navbar-default-color: white;
 $navbar-default-hover-color: white;
 $navbar-default-link-color: white;
-$navbar-default-link-hover-color: black;
-$navbar-default-link-hover-bg: white;
+$navbar-default-link-hover-color: $brand-primary;
+$navbar-default-link-hover-bg: transparent;
 $navbar-default-link-active-color: black;
 $navbar-default-link-active-bg: white;
 $navbar-default-link-active-bg-color: black;
@@ -49,8 +49,8 @@ nav {
 
 .navbar-default {
 	.navbar-nav > li > a {
-		transition: color $trans-cubic-fast;
-		transition: background-color $trans-cubic-fast;
+		// transition: color $trans-cubic-fast;
+		transition: all $trans-cubic-fast;
 	}
 
 	.navbar-toggle {

@@ -118,11 +118,19 @@ module.exports = function(grunt) {
                     proxy: "cohen.app"
                 }
             }
+        },
+        copy: {
+            files: {
+                cwd: 'bower_components/font-awesome/fonts', // set working folder / root to copy
+                src: '**/*', // copy all files and subfolders
+                dest: 'public/fonts', // destination folder
+                expand: true // required when using cwd
+            }
         }
     });
 
     require('load-grunt-tasks')(grunt);
     grunt.registerTask('default', ['browserSync', 'watch']);
-    grunt.registerTask('prod', ['sass:dist', 'postcss:prod', 'concat', 'uglify']);
-    grunt.registerTask('dev', ['sass:dist', 'postcss:dev', 'concat', 'uglify']);
+    grunt.registerTask('prod', ['sass:dist', 'postcss:prod', 'concat', 'uglify', 'copy']);
+    grunt.registerTask('dev', ['sass:dist', 'postcss:dev', 'concat', 'uglify', 'copy']);
 };

@@ -1,7 +1,7 @@
 <div class="breadcrumbs">
-	
+		
 		<ol class="breadcrumb">
-		<li><a href="/">Home</a></li>
+		<li><a href="/"> @include('icons.tooth-crown') Home</a></li>
 		@if (isset($pages))
 			@foreach ($pages as $key => $value)
 				<li> <a href='{{$key}}'>{{$value}}</a></li>
@@ -14,5 +14,6 @@
 		
 		</ol>
 		@include('mixins.social-icons')
+		{{-- <div class="share-button"></div> --}}
 		
 	</div>

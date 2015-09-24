@@ -20,9 +20,14 @@
     @include('mixins.breadcrumbs',array( 'current' => 'About Us' ))
 	
     <div class="row content-section">
-    	<main class='main-content'>
+
+        <main class='main-content'>
             <h1> About Us </h1>
             <h2>Delivering greater comfort</h2>
+            <a href='/meet-your-team' class="meet-team-wrap">
+                @include('icons.meet') 
+                <h3> Meet Your Team </h3>
+            </a>
             <p>The latest technological advances and carefully designed treatment plans make orthodontic treatment more technically and personally comfortable than ever.</p>
             <p>We constantly survey our profession to combine tried-and-true techniques and materials with the <strong>most effective new technology</strong>. We sort out the fads from the foundations of orthodontics. And we never get tired of hearing "that didn’t hurt at all."</p>
             <p>The greatest leap in patient comfort has come with the advent of <strong>Invisalign®</strong> and <strong>3-D scanning</strong>. We can now straighten your teeth without braces, wires and messy, uncomfortable impressions. Orthodontics really has gone digital! <a href='/meet-your-team'>Dr. Cohen</a> is a<strong> Premier Invisalign Provider</strong></p>

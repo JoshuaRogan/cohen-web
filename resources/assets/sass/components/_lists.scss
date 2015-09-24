@@ -1,0 +1,37 @@
+/**
+ * Global Styling for lists using font awesome 
+ * @author: Josh Rogan
+ * 
+ */
+.main-content {
+	ul:not(.credit-accepted) {
+		// @extend .fa-ul;
+		padding-left: 0;
+		margin-left: $fa-li-width;
+		list-style-type: none;
+
+		> li {
+			position: relative;
+			&:before {
+				@extend .fa-li;
+				position: absolute;
+				top: 0;
+				left: -$fa-li-width;
+				width: $fa-li-width;
+				top: (2em / 14);
+				text-align: center;
+				font-family: FontAwesome;
+				content: "\f058";
+				color: $brand-primary;
+			}
+		}
+	}
+
+	ul.sitemap{
+		 li{
+			&:before {
+				content: "\f0c1";
+			}
+		}
+	}
+}

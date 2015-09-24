@@ -24,7 +24,9 @@ header {
 		}
 
 		ul.offices {
-			@extend .list-unstyled, .text-center;
+			@extend .list-unstyled;
+			@include xs_down(text-align, center);
+			@include responsive-man(font-size, 18px, 14px, 20px, 24px);
 		}
 
 	}

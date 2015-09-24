@@ -1,0 +1,32 @@
+.listing {
+    @extend .container;
+
+    .stylish-panel {
+        padding: 20px 0;
+        text-align: center;
+
+        > div > a > div {
+            padding: 10px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            transition: 0.2s;
+            color: $text-color;
+
+        }
+        > div:hover > a > div {
+            margin-top: -10px;
+            border: 1px solid rgb(200, 200, 200);
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+            background: rgba(200, 200, 200, 0.1);
+            transition: 0.5s;
+        
+            
+            
+        }
+        .b64 {
+            max-height: 150px;
+            max-width: 150px;
+            transition: transform .2s ease-in-out; 
+        }
+    }
+}

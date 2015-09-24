@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
+    "font-awesome": "fontawesome#~4.4.0",
     "Materialize": "materialize#~0.97.1",
     "owl.carousel": "~2.0.0-beta.3"
   }

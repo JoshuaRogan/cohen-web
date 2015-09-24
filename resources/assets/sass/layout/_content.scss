@@ -1,34 +1,38 @@
-.main-content {
-	@extend .col-sm-8;
+#main{
 
-	&.full{
-		@extend .col-sm-12;
+
+	.main-content {
+		@extend .col-sm-8;
+
+		&.full{
+			@extend .col-sm-12;
+		}
+
+		a {
+
+		}
+
+		.footer-text{
+			border-top: 1px solid $brand-primary;
+			margin-top: 10px;
+			padding-top: 10px;
+			font-size: 12px;
+			font-weight: 300;
+		}
 	}
+	.sidebar {
+		@extend .col-sm-4;
 
-	a {
+		button {
+			@extend .mfull;
 
-	}
+			.icon {
+				@extend .pull-left;
+				margin-top: -5px;
 
-	.footer-text{
-		border-top: 1px solid $brand-primary;
-		margin-top: 10px;
-		padding-top: 10px;
-		font-size: 12px;
-		font-weight: 300;
-	}
-}
-.sidebar {
-	@extend .col-sm-4;
-
-	button {
-		@extend .mfull;
-
-		.icon {
-			@extend .pull-left;
-			margin-top: -5px;
-
-			.fa {
-				font-size: 2em;
+				.fa {
+					font-size: 2em;
+				}
 			}
 		}
 	}
